@@ -1,0 +1,58 @@
+<html>
+<head>
+	<title>Gabriel Schwarz de Amorim</title>
+	<style type="text/css">
+		h1 {
+			font-weight: bold;
+		}
+
+		h2 {
+			color: red;
+		}
+	</style>
+</head>
+<body>
+
+	<h1>PSITACIDIOS</h1>
+	<h2>conheça essas aves incriveis</h2>
+
+</body>
+
+<b>Algumas especies da família psittacidae:</b>
+  <ul>
+    <li>Dalopsita</li>
+    <li>Periquito</li>
+    <li>Papagaio do Congo, ou Papagaio cinzento</li>
+    <li>Arara</li>
+  </ul>
+
+ <p>
+   Os psitacideos são animais incriveis. o que mais chama a atenção nessas aves é a capacidade intelectual aparente. Foi comprovado que papagaios, por exemplo, não só repetem palavras, mas sim de fato compreendem e fazem uso de linguagem. A filosofia da linguagem nos mostra o quão importante esse fato é.
+   Principalmente o Papagaio do congo que é considerado por muitos que o conhecem como "o animal mais inteligente de todos". (Além de ser lindissimo, diga-se de passagem) 
+ </p>
+
+<a href="https://youtu.be/1CXu1ho3-7I" target="_blank">A historia de Alex, o papagaio que provou sua inteligencia ao mundo, em 5 minutos.</a><br>
+  <p>Dependendo da especie, há psitacidios que chegam a incriveis 80 anos de idade, porem Alex morreu com apenas 35, mas não antes de mostrar sua capacidade. Alex compreendia o conceito de forma, cor. Mas não para por ai, alex demonstrou compreender conceitos abstratos como números, ao contar, e ate mesmo o conceito de zero, algo que há alguins séculos os próprios humanos desconheciam. Ele ate mesmo chegou a fazer uma pergunta, ao olhar suas penas no espelho: "de que cor é? cinza!"</p>
+  <img width="200px" src="https://www.criadourovaleverde.com.br/wp-content/uploads/2021/06/b68ceeb60bc9cb79baadebc160b4c4ad.jpg">
+  <img width="200px" src="https://cdn.jornaldebrasilia.com.br/wp-content/uploads/2021/03/09165626/papagaioCapa.jpg">
+  <img width="200px" src="https://assets.epuzzle.info/puzzle/076/419/original.webp">
+  <img width="200px" src="https://www.criadourovaleverde.com.br/wp-content/uploads/2021/06/papagaio-do-congo-capa.jpg">
+ <p>Apesar da capacidade cognitiva reconhecida dos psitacidios, nem todas as aves incrivelmente inteligentes pertencem a esse grupo. um grande exemplo eh o corvo, que tambem é descrito por alguins como o animal mais inteligente, principalmente por sua capacidade de utilizar ferramentas. Porem, é preciso ressaltar alguins exemplos de animais que dependendo da pessoa que estiver falando, pode ser ressaltado como "o mais inteligente"</p>
+  <b>Animais incrivelmente inteligentes:</b>
+  <ol>
+    <li>Golfino</li>
+    <li>Elefante</li>
+    <li>Outros primatas</li>
+  </ol>
+</body>
+
+  <ul>
+  {% for task in tasks %}
+    <li>
+      {{ task.title }}
+      <a href="/tasks/edit/{{task.id}}">Editar</a>
+      <a href="/tasks/delete/{{task.id}}">Remover</a>
+    </li>
+  {% endfor %}
+</ul>
+</html>
