@@ -1,21 +1,20 @@
 from django.shortcuts import render, redirect
 from .models import Task
 
-
+# Função para exibir a página inicial (home)
 def home(request):
     tasks = Task.objects.all()
     context = {"tasks": tasks}
     return render(request, "home.html", context=context)
 
-
+# Função para listar todas as tarefas
 def list_tasks(request):
     tasks = Task.objects.all()
     context = {"tasks": tasks}
     return render(request, "list_tasks.html", context=context)
 
-
+# Função para criar uma nova tarefa
 def create_task(request):
-    # Se o usuário submeter o formulário, ele cai no if abaixo
     if request.method == "POST":
         if "done" not in request.POST:
             done = False
@@ -29,10 +28,9 @@ def create_task(request):
 
     return render(request, "task_form.html")
 
-
+# Função para atualizar uma tarefa existente
 def update_task(request, task_id):
     task = Task.objects.get(id=task_id)
-    # É necessário converter o objeto datetime para uma string para que ele apareça corretamente como valor do input do meu template
     task.due_date = task.due_date.strftime('%Y-%m-%d')
 
     if request.method == "POST":
@@ -48,7 +46,7 @@ def update_task(request, task_id):
 
     return render(request, "task_form.html", context={"task": task})
 
-
+# Função para excluir uma tarefa existente
 def delete_task(request, task_id):
     task = Task.objects.get(id=task_id)
     if request.method == "POST":
