@@ -32,7 +32,6 @@ def create_task(request):
 def update_task(request, task_id):
     task = Task.objects.get(id=task_id)
     task.due_date = task.due_date.strftime('%Y-%m-%d')
-
     if request.method == "POST":
         task.title = request.POST["title"]
         task.description = request.POST["description"]
